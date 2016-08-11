@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"install python python-dev cmake YCM(make) 
+"install python python-dev cmake YCM(make) vim7.4
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " required
 filetype off                  " required
@@ -8,14 +8,15 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-" let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'jnurmine/Zenburn'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'fugalh/desert.vim'
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -47,6 +48,11 @@ map <F2> :NERDTreeToggle<CR>
 "define for ray
 let python_highlight_all=1
 syntax on
+" set background=dark
+" colorscheme solarized
+" colorscheme zenburn
+colorscheme desert
+
 set encoding=utf-8
 set nu
 set relativenumber
@@ -57,3 +63,4 @@ set sm
 set selection=inclusive
 set smarttab
 set smartindent
+set cmdheight=1
