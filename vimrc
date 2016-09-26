@@ -64,3 +64,4 @@ set selection=inclusive
 set smarttab
 set smartindent
 set cmdheight=1
+set backspace=indent,eol,start
