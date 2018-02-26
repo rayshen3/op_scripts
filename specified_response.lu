@@ -1,0 +1,15 @@
+-- content_by_lua
+ifile = io.open("/home/xxx.dat","rb")
+idata = ifile:read("*all")
+
+if ngx.var.http_Msg_Type == "xxx" then
+  ngx.header["Content-Type"] = "xxx"
+  ngx.print(idata)
+elseif ngx.var.http_Msg_Type == "yyy" then
+  ngx.header["Content-Type"] = "yyy"
+  ngx.print(idata)
+else
+  ngx.header["Content-Type"] = "zzz"
+  ngx.print("{\\"zzz\\": \\"zz\\"}")
+end
+ifile.close()
